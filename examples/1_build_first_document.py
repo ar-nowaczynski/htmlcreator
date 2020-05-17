@@ -1,6 +1,5 @@
 import numpy as np
 import pandas as pd
-
 from htmlcreator import HTMLDocument
 
 np.random.seed(123)
@@ -59,9 +58,9 @@ document.add_header('after page break')
 # Add image link (filepath or URL)
 document.add_header('image from the Internet')
 image_url = 'https://spacecenter.org/wp-content/uploads/2020/01/KSC-20200117-PH-SPX01_0001_medium.jpg'
-document.add_image_link(image_url, width='100%')
+document.add_image_link(image_url, title='image from the Internet', width='100%')
 
 # Write to file
-output_filepath = 'first_document.html'
+output_filepath = '1_first_document.html'
 document.write(output_filepath)
 print(f'{output_filepath} has been saved successfully!')

@@ -6,9 +6,9 @@ README_TEXT = README_PATH.read_text()
 
 setup(
     name='htmlcreator',
-    version='0.3.0',
+    version='0.4.0',
     license='MIT',
-    description='Build standalone HTML documents from Python code',
+    description='Build standalone HTML documents using Python code',
     long_description=README_TEXT,
     long_description_content_type='text/markdown',
     author='Arkadiusz Nowaczyński',
@@ -23,6 +23,7 @@ setup(
         'numpy>=1.14.0',
         'pandas>=0.22.0',
         'Pillow>=5.0.0',
+        'plotly>=4.6.0',
     ],
     classifiers=[
         'License :: OSI Approved :: MIT License',

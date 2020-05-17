@@ -6,6 +6,7 @@ from typing import Optional, Union
 import numpy as np
 import pandas as pd
 import PIL
+import plotly
 from PIL import Image
 
 
@@ -17,6 +18,7 @@ class HTMLDocument:
         self.title = self.__class__.__name__
         self.head = ''
         self.body = ''
+        self._is_plotlyjs_included = False
         self._set_default_style()
 
     def __str__(self) -> str:
@@ -127,6 +129,34 @@ class HTMLDocument:
             pixelated=pixelated,
         )
 
+    def add_plotly_figure(
+        self,
+        fig: plotly.graph_objs.Figure,
+        include_plotlyjs: bool = True,
+    ) -> None:
+        """Add plotly figure."""
+        if not isinstance(fig, plotly.graph_objs.Figure):
+            raise TypeError(
+                f'fig is of type {type(fig)}, '
+                f'but it should be {plotly.graph_objs.Figure}.'
+            )
+        if self._is_plotlyjs_included:
+            include_plotlyjs = False
+        elif include_plotlyjs:
+            self._is_plotlyjs_included = True
+        else:
+            include_plotlyjs = 'cdn'
+        plotly_figure_html = plotly.io.to_html(
+            fig=fig,
+            full_html=False,
+            include_plotlyjs=include_plotlyjs,
+        )
+        self.body += (
+            '<div class="plotly-figure">\n'
+            f'{plotly_figure_html}\n'
+            '</div>\n'
+        )
+
     def set_style(self, style: str) -> None:
         """Set CSS style."""
         self.style = style
@@ -151,7 +181,7 @@ class HTMLDocument:
         """Add image tag."""
         image_tag = f'<img src="{src}"'
         if title:
-            image_tag += f' title={title}'
+            image_tag += f' title="{title}"'
         if height:
             image_tag += f' height={height}'
         if width:
