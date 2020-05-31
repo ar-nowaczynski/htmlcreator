@@ -16,6 +16,12 @@ Useful for:
 
 - accessibility (all Internet browsers open HTML file)
 
+## Installation
+
+```bash
+$ pip install htmlcreator
+```
+
 ## Usage
 
 See examples:
@@ -24,12 +30,6 @@ See examples:
 | - | - | - |
 | 1 | [build_first_document.py](https://github.com/ar-nowaczynski/htmlcreator/blob/master/examples/1_build_first_document.py) | [first_document.html](https://htmlpreview.github.io/?https://github.com/ar-nowaczynski/htmlcreator/blob/master/examples/1_first_document.html) |
 | 2 | [build_document_with_plotly.py](https://github.com/ar-nowaczynski/htmlcreator/blob/master/examples/2_build_document_with_plotly.py) | [document_with_plotly.html](https://htmlpreview.github.io/?https://github.com/ar-nowaczynski/htmlcreator/blob/master/examples/2_document_with_plotly.html) |
-
-## Installation
-
-```bash
-$ pip install htmlcreator
-```
 
 ## License
 
