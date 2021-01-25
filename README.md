@@ -28,8 +28,8 @@ See examples:
 
 | | script | output |
 | - | - | - |
-| 1 | [build_first_document.py](https://github.com/ar-nowaczynski/htmlcreator/blob/master/examples/1_build_first_document.py) | [first_document.html](https://htmlpreview.github.io/?https://github.com/ar-nowaczynski/htmlcreator/blob/master/examples/1_first_document.html) |
-| 2 | [build_document_with_plotly.py](https://github.com/ar-nowaczynski/htmlcreator/blob/master/examples/2_build_document_with_plotly.py) | [document_with_plotly.html](https://htmlpreview.github.io/?https://github.com/ar-nowaczynski/htmlcreator/blob/master/examples/2_document_with_plotly.html) |
+| 1 | [build_first_document.py](https://github.com/ar-nowaczynski/htmlcreator/blob/master/examples/1_build_first_document.py) | [first_document.html](https://ar-nowaczynski.github.io/htmlcreator/examples/1_first_document.html) |
+| 2 | [build_document_with_plotly.py](https://github.com/ar-nowaczynski/htmlcreator/blob/master/examples/2_build_document_with_plotly.py) | [document_with_plotly.html](https://ar-nowaczynski.github.io/htmlcreator/examples/2_document_with_plotly.html) |
 
 ## License
 
