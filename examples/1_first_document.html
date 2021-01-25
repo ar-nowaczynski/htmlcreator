@@ -1,230 +1,380 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>my first document title</title>
-<style type="text/css">
-body {
-    max-width: 960px;
-    margin: auto;
-    padding-bottom: 20px;
-    font-family: sans-serif;
-}
-div.pandas-dataframe {
-    overflow: auto;
-}
-table.dataframe {
-    border-collapse: collapse;
-    border: none;
-}
-table.dataframe td {
-  background-color: #fffef4;
-  font-size: 14px;
-  text-align: center;
-  white-space: nowrap;
-  margin: 0;
-  padding-top: 0.4em;
-  padding-bottom: 0.4em;
-  padding-left: 0.5em;
-  padding-right: 0.5em;
-  border: 1px solid #d7d7d7;
-}
-table.dataframe th {
-  background-color: #f9f9f9;
-  font-size: 12px;
-  text-align: center;
-  white-space: nowrap;
-  padding-left: 1em;
-  padding-right: 1em;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
-  border: 1px solid #e0e0e0;
-}
-table.dataframe tr:nth-child(even) td {
-  background: #fff2e4;
-}
-table.dataframe tr:nth-child(odd) td {
-  background: #ffffe8;
-}
-table.dataframe tr:hover td {
-  background-color: #ddeeff;
-}
-table.dataframe tbody th {
-  font-weight: normal;
-}
-</style>
-</head>
-<body>
-<h1 style="text-align: center">my first document header level 1</h1>
-<h2 style="text-align: left">section header level 2</h2>
-<p style="font-size:14px; text-indent: 15px; text-align: justify">this is text, this is text, this is text, this is text, this is text, this is text, this is text, this is text, this is text, this is text, this is text, this is text, this is text, this is text, this is text, this is text, this is text, this is text, this is text, this is text, this is text, this is text, this is text, this is text, this is text, this is text, this is text, this is text, this is text, this is text, this is text, this is text, this is text, this is text, this is text, this is text, this is text, this is text, this is text, this is text, this is text, this is text, this is text, this is text, this is text, this is text, this is text, this is text, this is text, this is text</p>
-<p style="font-size:16px; text-indent: 0; text-align: left">another text</p>
-<h2 style="text-align: left">images section</h2>
-<img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/Af7NS7Sg8tJJQemKywBCRbBt3O8SOmLU3bAA5vYijRE8GrhTHi+4AWr4uROD+9PxhZZDjtJ0GtV3BI3cAAAAAElFTkSuQmCC" title="image0" height=32 style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated">
-<img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/ANZcE/vhVjJpYABRrwFx2GYjpvSK/dWyWPQC2Pj70KK8i+t/swc0ApcINjxP6vpU6woh+7ibGsNuFIvjAAAAAElFTkSuQmCC" title="image1" height=32 style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated">
-<img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAPUlEQVR4nGMMdnWT5XS1+FCUwinEuKTyNu/zeFPWaWJLTjC6uLyteGvEWCDBJfad4fDGLQVMGa90QiTzRQHWoxK4lFQmDQAAAABJRU5ErkJggg==" title="image2" height=32 style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated">
-<img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/ACfAE4hCRVu2VNoliAIItnXlttQN7Gl9FsQBsFx0KSvQIPYl7vhQArO0EOT1xXMf8zgfolB2F/43TajFAAAAAElFTkSuQmCC" title="image3" height=32 style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated">
-<img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/AbQM8gRaUxYEHKFD8QIhxKnvEOnQ8v0EBA0Am3VvOiIJCTzh1zBLAUxC7bBmuYv53ch3QRyeFkRZf3bRAAAAAElFTkSuQmCC" title="image4" height=32 style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated">
-<img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/AGowlBdFw+nGQAoHbwFL0ym8z9xGzDXWF/IEP1I5M/HG8xHe6dygAJLwuxPkWfBPDz3O42SEGVq7nb8GAAAAAElFTkSuQmCC" title="image5" height=32 style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated">
-<img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/AOtbJW2b0RjA/Sa15AHs34LFv/YDUzw4Ec8EWn/2Og/NWtj7dbksBFRODPck5b9NQYD9rq3qGeXRMlchAAAAAElFTkSuQmCC" title="image6" height=32 style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated">
-<img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/AA6fOVH/oE9/9AwyagFnUepHeoUYEkf9zzQAx9cdQIHE4hsrIqh7AvO1uz7k4WvhjADzwEQLGDtolLM+AAAAAElFTkSuQmCC" title="image7" height=32 style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated">
-<img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/ABn6/ISyGdZv1KfmnAQfJWk8EmwL7TgYrG8AEhKL09HtN8wBJmKaATM4XxV0NEHf4vZp+VYaFrflHO1dAAAAAElFTkSuQmCC" title="image8" height=32 style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated">
-<img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/Aelev27StijSw13YFQTyCX8AgblCuV9FmloAA7pprkP8jt6L8B3gApIQJZaWDR2k3H7QlJFjGMgVhnRuAAAAAElFTkSuQmCC" title="image9" height=32 style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated">
-<img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/AOklWKtiFa5EA/D/lQCLF0nWA635n/NyQEUB+Gu4tHNsBqniDxzRAAk55SxXREwVDqShUGSMFiNaDe9AAAAAAElFTkSuQmCC" title="image10" height=32 style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated">
-<img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/Aea3gN0cOVwRwMx8xQTgzapr1RiZpT2WWgUCVQZiZJqToQXbHPWaAL0vWIVux6TiSk/8KIgsGGsb3JkgAAAAAElFTkSuQmCC" title="image11" height=32 style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated">
-<img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/AGNjk6B0TkfrY9AxuQDByIn+LwshBO3JH3oBELAsiNVavMriJTomAW0k2BQyvDDSml+6GV3vFpQWGjFLAAAAAElFTkSuQmCC" title="image12" height=32 style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated">
-<img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/AA+hLyc7zYrDKDkOsgKKzJr08uAQjomU7dABAPcksayBNUX4KQTwAYF957ZWXFuQAdGRGGibF+p3AJ9eAAAAAElFTkSuQmCC" title="image13" height=32 style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated">
-<img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/AZ571U4MqvNT3tCdegHmxR3Qd0vIH9mDPSMAdM8oC/6SNjvMRwVOAUMhUx4LLI45tPQwWXxqFd9QOnghAAAAAElFTkSuQmCC" title="image14" height=32 style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated">
-<img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/AIcueLTmI4WOWNDP/gHG9w47li4czmBU+gcEpl4owurJ/88Yr8xDAKTPAwt3XhOx8FkD4JiUGOx8aqrOAAAAAElFTkSuQmCC" title="image15" height=32 style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated">
-<img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/AOBJsCZ5BedKqMEcZgL4dJSd+7bB81KpEPgC5/6olMYd9aLz8zAlAo6VnLDOEArL4V/2CtGpG92L7Y7oAAAAAElFTkSuQmCC" title="image16" height=32 style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated">
-<img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/AYbRHJVwwGX8AtRFQwJAw2bH53btFZnbUFQEBLPaxyRKBt8wcuIMAs8n06KeqS9crxGv+X6IGIgGZA/kAAAAAElFTkSuQmCC" title="image17" height=32 style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated">
-<img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/AfFlveki02AIfYH1VQCshYyt+wIZUQHtIs8B9xaxY5MNADUQqu5dAsF3UBEu++b2cY5K5HfxGBxiQ3z1AAAAAElFTkSuQmCC" title="image18" height=32 style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated">
-<img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/AOEhs1YDSnx6ESBojQJ3k7cv66ifGsYsPAcBxTCDwDEnou6IA2HOAqA9+mYhit2uYLAUpx+RFgMTa3O9AAAAAElFTkSuQmCC" title="image19" height=32 style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated">
-<img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/AC53xOct4mdZuZ8nNQGjI4Xn7xFWOEVJq5cArmIfhbYvRkj3qePmAEmQvkvRO8/7PkpAkGQ4GAUxLjMNAAAAAElFTkSuQmCC" title="image20" height=32 style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated">
-<img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/AcNG7n5F2NUs1L/C9gFcqIIoUP0R1kzUUY8ELsdz2tvWeR5inQiOAHq6hN+60Tspu7z6KsvAGwfddS/1AAAAAElFTkSuQmCC" title="image21" height=32 style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated">
-<img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/AJdhx5kZYcv8G0up3QIi4KzAVbH9/+Di2fYCShDeu/UE+hXT/SaaAFXVXgG761w09s0O4+tFHIny+MRbAAAAAElFTkSuQmCC" title="image22" height=32 style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated">
-<img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/AbDpXMNPydmxsu9RtQBXYwwzZELkF4SbDQcBRRH/Bl/d8WFc7aW1BPdZ6fgZXm7AisrlIZSfGZFxo25JAAAAAElFTkSuQmCC" title="image23" height=32 style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated">
-<img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/AOXzGHWhqksRRRTnwASXtzcE6AOfrIoKgrMA+6xvDBwWs2pCMW21AQrsfjf4KJfyXe/UXlcZF3LvjTs4AAAAAElFTkSuQmCC" title="image24" height=32 style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated">
-<img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/ALDneioDv7DOF3vvxwDbQqDPt3ZaSSLxqa8AJc10TjHtG/5Xk06qAFU3umeZMoQckTmvMJ28GBlMYcxuAAAAAElFTkSuQmCC" title="image25" height=32 style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated">
-<img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/ALoUNarCAPl8LZVK4wJQOGbWxnRINsit+IQC1gce8JHRG3xuj+wJAUOuS8nFC9FQ6zAKWWzmF5DDwfytAAAAAElFTkSuQmCC" title="image26" height=32 style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated">
-<img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/AAfqzZDGwRJEY0e8FQHh9J8As09I7uTi78MC+6T67//rEeWz8MXBAq3QT1sCzztzZKo1uO1gHQKw0AeWAAAAAElFTkSuQmCC" title="image27" height=32 style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated">
-<img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/AET9LsD6dTMo19j1kgHooq9u8w4VK5yPDRcAMhtDFKRXEK8s7ADcAVwCtNjhYxrvPEv8SmsaFr8VCo7oAAAAAElFTkSuQmCC" title="image28" height=32 style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated">
-<img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/AFFZ7ejnK6rsf/ntIAQbK3UsVl/b197+LlwA9TNvI/cQ1bL3rj1mBBl5cgbX8Mq6IN9Ax7WPGlTK1SQ3AAAAAElFTkSuQmCC" title="image29" height=32 style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated">
-<img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/AT6L7VERFlHScnrdqgQS35/vZeeulwR+tQkBmOzHN5LdGODrIXDoALGfEOzQCdXOfwJe148gGeawuawLAAAAAElFTkSuQmCC" title="image30" height=32 style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated">
-<img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/AO6x5gHui9CnVC41jQT91Yx1PqjDR8Bm/bYCiu2XHxWg8n67HB6kAqvPv7SjOzlL7I3SD9Z2GvN6GuXcAAAAAElFTkSuQmCC" title="image31" height=32 style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated">
-<img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/AGI3BWFqONSw0jUbqwIFjy908EetV5XEi+wBo13K/908zD2gscdiAAH7dKzo8am+tP03ZGYvGkVWRhriAAAAAElFTkSuQmCC" title="image32" height=32 style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated">
-<img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/AZHTEOjaDEQG+o54CQD+9Tf3NTDqitmnKxcBSiEYx84x0B83CjQnAtkucIWCOh7w0wEKGVTZFOeoP6q8AAAAAElFTkSuQmCC" title="image33" height=32 style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated">
-<img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/AF4598RHsuWCJ9zikgFX96WU/qhbJQZRtvoBdlMoPftFgjCwF8SMARNct+fJ6pfnYN/FUbF0Gquzp2h9AAAAAElFTkSuQmCC" title="image34" height=32 style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated">
-<img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/AYUg1EVJpb3H2BWaMwIeXk+E5DF+PcgcTdQCviSjeygI8EDE4UURAcbRxkfpwxfBFHECMUssFlD/DvtVAAAAAElFTkSuQmCC" title="image35" height=32 style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated">
-<img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/AFE6fy6V8VqakPRBUgEeDbyJqh3NIfctju8AnuzYLwzMHolaltNqBDXBGeyEbBZtAiIJFVVVFYJkrRmyAAAAAElFTkSuQmCC" title="image36" height=32 style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated">
-<img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/ACbOkTxipR4sB4a16gBq6hmvpRgc6w6goocCB0hGaNua8rXSUQ/vAhEETjlmjYPgRbMiBzKVFUe1wk0+AAAAAElFTkSuQmCC" title="image37" height=32 style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated">
-<img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/AK+bTFA+1PTRvXEeDAAOavMhPRzfPXwjDh8CWzeB9xQIXDWpz+8dAnUHBvJCQZBclbfxEBhNFFJkUHxEAAAAAElFTkSuQmCC" title="image38" height=32 style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated">
-<img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/AQZMHd8YsugEC9qoMQFHbl0Y3wbtAI78u2YEBwGqnHmQCQrv+M8zAuULMYybOFHQI6GrAw5JFNhrDgR4AAAAAElFTkSuQmCC" title="image39" height=32 style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated">
-<img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/AYBsa4H82QC2OgUF/gL+cHDH5dUC3+AEHvMApSgMYHHexBM0ftcYAVMzi9vPHBF0O7jqo3TlF7uoL/1SAAAAAElFTkSuQmCC" title="image40" height=32 style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated">
-<img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/AO11h/bgpLV6DjaCVwECUkROCe82cadltz8EbN89Xr0r66rG18wcAmTeB3PJ38nZ2UdnZXkiGRjeqywZAAAAAElFTkSuQmCC" title="image41" height=32 style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated">
-<img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/ACClMbee7RtOA9MXaQHfxrUGIx8ARwcPzrkEGO74AIkTboaJLpk2AGpsAa/bxo7dTr9V8gfVFX2e3myqAAAAAElFTkSuQmCC" title="image42" height=32 style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated">
-<img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/AG9IdgYVhsnpnvBTRAG7Ch9SSpx6LGTU3EICi0YlBIwr0RBoEtudAgcKrBDd5jCscaMFlRKbFGG3I5egAAAAAElFTkSuQmCC" title="image43" height=32 style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated">
-<img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/Adic0YdD+zRzT+l3GwBBreL7EID+GtrVXpMEQB6hQHdU+hpLlFMnAhLyJSt4+jUBS0qscoeAFrwVb4+RAAAAAElFTkSuQmCC" title="image44" height=32 style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated">
-<img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/AL8A/0fkHrRmeCu+XAGULfYvLILCqKYYf90B08SfioEUrOa+t4EXArtF4BxzK3D+j53bBIQLGQI9SLN2AAAAAElFTkSuQmCC" title="image45" height=32 style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated">
-<img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/AFlg8Zgcu6RvQQoMSwEVlfY2JxmD5ezJH2kAHNK0Bgh8jNYoUznjABQM0qa2WSAE+JYy9BpdFS872I6qAAAAAElFTkSuQmCC" title="image46" height=32 style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated">
-<img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/AF9SgCDfrxx6bh70xgDrKv/gJ8q/CxkhzsoCxNgF1lauLzizWcguAtMlKw1iJDicVGAI2md9FkVt2x5dAAAAAElFTkSuQmCC" title="image47" height=32 style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated">
-<br>
-<img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/AWAnzVUC6KgxNIcGDABMRGf5Kj8IbsUX3KwCt7oN5jtMAkX680SvAMUkqHWy/QTuwiXaEQszFfuKJClaAAAAAElFTkSuQmCC" title="image48" height=32 style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated">
-<br>
-<img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/ANpKFibnoHv/072l8AK3Wy19rEOx1sq1zSEAyQyX2LM8aSUWa7kfAmX5LP7PIUpz3dM9J7mVGY1zKCmAAAAAAElFTkSuQmCC" title="image49" height=32 style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated">
-<h2 style="text-align: left">table section</h2>
-<div class="pandas-dataframe">
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>c0</th>
-      <th>c1</th>
-      <th>c2</th>
-      <th>c3</th>
-      <th>c4</th>
-      <th>c5</th>
-      <th>c6</th>
-      <th>c7</th>
-      <th>c8</th>
-      <th>c9</th>
-      <th>col_str</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>1970-01-01</th>
-      <td>0.435876</td>
-      <td>-0.318957</td>
-      <td>0.630488</td>
-      <td>-2.152493</td>
-      <td>-1.465116</td>
-      <td>0.363446</td>
-      <td>1.862928</td>
-      <td>0.835059</td>
-      <td>-0.682451</td>
-      <td>-1.692052</td>
-      <td>value_str</td>
-    </tr>
-    <tr>
-      <th>1970-01-02</th>
-      <td>0.742686</td>
-      <td>-0.080583</td>
-      <td>0.590704</td>
-      <td>0.115299</td>
-      <td>0.029643</td>
-      <td>2.958625</td>
-      <td>-0.006130</td>
-      <td>-0.159245</td>
-      <td>-0.121449</td>
-      <td>-0.583537</td>
-      <td>value_str</td>
-    </tr>
-    <tr>
-      <th>1970-01-03</th>
-      <td>0.990133</td>
-      <td>-0.353754</td>
-      <td>0.635943</td>
-      <td>0.284603</td>
-      <td>1.218986</td>
-      <td>0.420180</td>
-      <td>-1.213385</td>
-      <td>-1.326488</td>
-      <td>1.408369</td>
-      <td>-0.608711</td>
-      <td>value_str</td>
-    </tr>
-    <tr>
-      <th>1970-01-04</th>
-      <td>-1.320603</td>
-      <td>-0.669619</td>
-      <td>1.264625</td>
-      <td>-1.420213</td>
-      <td>-0.866495</td>
-      <td>-0.666808</td>
-      <td>-1.251190</td>
-      <td>-1.184327</td>
-      <td>-1.518108</td>
-      <td>-0.461187</td>
-      <td>value_str</td>
-    </tr>
-    <tr>
-      <th>1970-01-05</th>
-      <td>-0.354909</td>
-      <td>-0.682538</td>
-      <td>-1.653698</td>
-      <td>1.253336</td>
-      <td>-1.329079</td>
-      <td>0.278034</td>
-      <td>-1.074767</td>
-      <td>0.668317</td>
-      <td>0.955832</td>
-      <td>-0.877614</td>
-      <td>value_str</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-<h2 style="text-align: left">page break example</h2>
-<p style="font-size:16px; text-indent: 0; text-align: left">mhm</p>
-<p style="font-size:16px; text-indent: 0; text-align: left">mhm</p>
-<p style="font-size:16px; text-indent: 0; text-align: left">mhm</p>
-<p style="font-size:16px; text-indent: 0; text-align: left">mhm</p>
-<p style="font-size:16px; text-indent: 0; text-align: left">mhm</p>
-<p style="font-size:16px; text-indent: 0; text-align: left">mhm</p>
-<p style="font-size:16px; text-indent: 0; text-align: left">mhm</p>
-<p style="font-size:16px; text-indent: 0; text-align: left">mhm</p>
-<p style="font-size:16px; text-indent: 0; text-align: left">mhm</p>
-<p style="font-size:16px; text-indent: 0; text-align: left">mhm</p>
-<p style="font-size:16px; text-indent: 0; text-align: left">mhm</p>
-<p style="font-size:16px; text-indent: 0; text-align: left">mhm</p>
-<p style="font-size:16px; text-indent: 0; text-align: left">mhm</p>
-<p style="font-size:16px; text-indent: 0; text-align: left">mhm</p>
-<p style="font-size:16px; text-indent: 0; text-align: left">mhm</p>
-<p style="font-size:16px; text-indent: 0; text-align: left">before page break</p>
-<p style="page-break-after: always;">&nbsp;</p>
-<h2 style="text-align: left">after page break</h2>
-<h2 style="text-align: left">image from the Internet</h2>
-<img src="https://spacecenter.org/wp-content/uploads/2020/01/KSC-20200117-PH-SPX01_0001_medium.jpg" title="image from the Internet" width=100% style="border:1px solid #021a40; margin: 3px 3px">
-</body>
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   my first document title
+  </title>
+  <style>
+   body { font-family: sans-serif; max-width: 80%; margin: auto; margin-bottom: 80px; } div.pandas-dataframe { overflow: auto; } table.dataframe { border-collapse: collapse; border: none; } table.dataframe td { background-color: #fffef4; font-size: 14px; text-align: center; white-space: nowrap; margin: 0; padding-top: 0.4em; padding-bottom: 0.4em; padding-left: 0.5em; padding-right: 0.5em; border: 1px solid #d7d7d7; } table.dataframe th { background-color: #f9f9f9; font-size: 12px; text-align: center; white-space: nowrap; padding-left: 1em; padding-right: 1em; padding-top: 0.5em; padding-bottom: 0.5em; border: 1px solid #e0e0e0; } table.dataframe tr:nth-child(even) td { background: #fffaf0; } table.dataframe tr:nth-child(odd) td { background: #fffff0; } table.dataframe tr:hover td { background-color: #ddeeff; } table.dataframe tbody th { font-weight: normal; }
+  </style>
+ </head>
+ <body>
+  <h1 style="text-align: center;">
+   my first document header level 1
+  </h1>
+  <h2 style="text-align: left;">
+   section header level 2
+  </h2>
+  <p style="font-size:14px; text-indent: 15px; text-align: justify;">
+   this is text, this is text, this is text, this is text, this is text, this is text, this is text, this is text, this is text, this is text, this is text, this is text, this is text, this is text, this is text, this is text, this is text, this is text, this is text, this is text, this is text, this is text, this is text, this is text, this is text, this is text, this is text, this is text, this is text, this is text, this is text, this is text, this is text, this is text, this is text, this is text, this is text, this is text, this is text, this is text, this is text, this is text, this is text, this is text, this is text, this is text, this is text, this is text, this is text, this is text
+  </p>
+  <p style="font-size:16px; text-indent: 0; text-align: left;">
+   more text
+  </p>
+  <h2 style="text-align: left;">
+   images section
+  </h2>
+  <br/>
+  <img height="32" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/Af7NS7Sg8tJJQemKywBCRbBt3O8SOmLU3bAA5vYijRE8GrhTHi+4AWr4uROD+9PxhZZDjtJ0GtV3BI3cAAAAAElFTkSuQmCC" style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated;" title="image0"/>
+  <img height="32" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/ANZcE/vhVjJpYABRrwFx2GYjpvSK/dWyWPQC2Pj70KK8i+t/swc0ApcINjxP6vpU6woh+7ibGsNuFIvjAAAAAElFTkSuQmCC" style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated;" title="image1"/>
+  <img height="32" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAPUlEQVR4nGMMdnWT5XS1+FCUwinEuKTyNu/zeFPWaWJLTjC6uLyteGvEWCDBJfad4fDGLQVMGa90QiTzRQHWoxK4lFQmDQAAAABJRU5ErkJggg==" style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated;" title="image2"/>
+  <img height="32" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/ACfAE4hCRVu2VNoliAIItnXlttQN7Gl9FsQBsFx0KSvQIPYl7vhQArO0EOT1xXMf8zgfolB2F/43TajFAAAAAElFTkSuQmCC" style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated;" title="image3"/>
+  <img height="32" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/AbQM8gRaUxYEHKFD8QIhxKnvEOnQ8v0EBA0Am3VvOiIJCTzh1zBLAUxC7bBmuYv53ch3QRyeFkRZf3bRAAAAAElFTkSuQmCC" style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated;" title="image4"/>
+  <img height="32" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/AGowlBdFw+nGQAoHbwFL0ym8z9xGzDXWF/IEP1I5M/HG8xHe6dygAJLwuxPkWfBPDz3O42SEGVq7nb8GAAAAAElFTkSuQmCC" style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated;" title="image5"/>
+  <img height="32" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/AOtbJW2b0RjA/Sa15AHs34LFv/YDUzw4Ec8EWn/2Og/NWtj7dbksBFRODPck5b9NQYD9rq3qGeXRMlchAAAAAElFTkSuQmCC" style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated;" title="image6"/>
+  <img height="32" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/AA6fOVH/oE9/9AwyagFnUepHeoUYEkf9zzQAx9cdQIHE4hsrIqh7AvO1uz7k4WvhjADzwEQLGDtolLM+AAAAAElFTkSuQmCC" style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated;" title="image7"/>
+  <img height="32" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/ABn6/ISyGdZv1KfmnAQfJWk8EmwL7TgYrG8AEhKL09HtN8wBJmKaATM4XxV0NEHf4vZp+VYaFrflHO1dAAAAAElFTkSuQmCC" style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated;" title="image8"/>
+  <img height="32" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/Aelev27StijSw13YFQTyCX8AgblCuV9FmloAA7pprkP8jt6L8B3gApIQJZaWDR2k3H7QlJFjGMgVhnRuAAAAAElFTkSuQmCC" style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated;" title="image9"/>
+  <img height="32" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/AOklWKtiFa5EA/D/lQCLF0nWA635n/NyQEUB+Gu4tHNsBqniDxzRAAk55SxXREwVDqShUGSMFiNaDe9AAAAAAElFTkSuQmCC" style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated;" title="image10"/>
+  <img height="32" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/Aea3gN0cOVwRwMx8xQTgzapr1RiZpT2WWgUCVQZiZJqToQXbHPWaAL0vWIVux6TiSk/8KIgsGGsb3JkgAAAAAElFTkSuQmCC" style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated;" title="image11"/>
+  <img height="32" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/AGNjk6B0TkfrY9AxuQDByIn+LwshBO3JH3oBELAsiNVavMriJTomAW0k2BQyvDDSml+6GV3vFpQWGjFLAAAAAElFTkSuQmCC" style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated;" title="image12"/>
+  <img height="32" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/AA+hLyc7zYrDKDkOsgKKzJr08uAQjomU7dABAPcksayBNUX4KQTwAYF957ZWXFuQAdGRGGibF+p3AJ9eAAAAAElFTkSuQmCC" style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated;" title="image13"/>
+  <img height="32" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/AZ571U4MqvNT3tCdegHmxR3Qd0vIH9mDPSMAdM8oC/6SNjvMRwVOAUMhUx4LLI45tPQwWXxqFd9QOnghAAAAAElFTkSuQmCC" style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated;" title="image14"/>
+  <img height="32" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/AIcueLTmI4WOWNDP/gHG9w47li4czmBU+gcEpl4owurJ/88Yr8xDAKTPAwt3XhOx8FkD4JiUGOx8aqrOAAAAAElFTkSuQmCC" style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated;" title="image15"/>
+  <img height="32" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/AOBJsCZ5BedKqMEcZgL4dJSd+7bB81KpEPgC5/6olMYd9aLz8zAlAo6VnLDOEArL4V/2CtGpG92L7Y7oAAAAAElFTkSuQmCC" style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated;" title="image16"/>
+  <img height="32" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/AYbRHJVwwGX8AtRFQwJAw2bH53btFZnbUFQEBLPaxyRKBt8wcuIMAs8n06KeqS9crxGv+X6IGIgGZA/kAAAAAElFTkSuQmCC" style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated;" title="image17"/>
+  <img height="32" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/AfFlveki02AIfYH1VQCshYyt+wIZUQHtIs8B9xaxY5MNADUQqu5dAsF3UBEu++b2cY5K5HfxGBxiQ3z1AAAAAElFTkSuQmCC" style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated;" title="image18"/>
+  <img height="32" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/AOEhs1YDSnx6ESBojQJ3k7cv66ifGsYsPAcBxTCDwDEnou6IA2HOAqA9+mYhit2uYLAUpx+RFgMTa3O9AAAAAElFTkSuQmCC" style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated;" title="image19"/>
+  <img height="32" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/AC53xOct4mdZuZ8nNQGjI4Xn7xFWOEVJq5cArmIfhbYvRkj3qePmAEmQvkvRO8/7PkpAkGQ4GAUxLjMNAAAAAElFTkSuQmCC" style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated;" title="image20"/>
+  <img height="32" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/AcNG7n5F2NUs1L/C9gFcqIIoUP0R1kzUUY8ELsdz2tvWeR5inQiOAHq6hN+60Tspu7z6KsvAGwfddS/1AAAAAElFTkSuQmCC" style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated;" title="image21"/>
+  <img height="32" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/AJdhx5kZYcv8G0up3QIi4KzAVbH9/+Di2fYCShDeu/UE+hXT/SaaAFXVXgG761w09s0O4+tFHIny+MRbAAAAAElFTkSuQmCC" style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated;" title="image22"/>
+  <img height="32" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/AbDpXMNPydmxsu9RtQBXYwwzZELkF4SbDQcBRRH/Bl/d8WFc7aW1BPdZ6fgZXm7AisrlIZSfGZFxo25JAAAAAElFTkSuQmCC" style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated;" title="image23"/>
+  <img height="32" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/AOXzGHWhqksRRRTnwASXtzcE6AOfrIoKgrMA+6xvDBwWs2pCMW21AQrsfjf4KJfyXe/UXlcZF3LvjTs4AAAAAElFTkSuQmCC" style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated;" title="image24"/>
+  <img height="32" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/ALDneioDv7DOF3vvxwDbQqDPt3ZaSSLxqa8AJc10TjHtG/5Xk06qAFU3umeZMoQckTmvMJ28GBlMYcxuAAAAAElFTkSuQmCC" style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated;" title="image25"/>
+  <img height="32" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/ALoUNarCAPl8LZVK4wJQOGbWxnRINsit+IQC1gce8JHRG3xuj+wJAUOuS8nFC9FQ6zAKWWzmF5DDwfytAAAAAElFTkSuQmCC" style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated;" title="image26"/>
+  <img height="32" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/AAfqzZDGwRJEY0e8FQHh9J8As09I7uTi78MC+6T67//rEeWz8MXBAq3QT1sCzztzZKo1uO1gHQKw0AeWAAAAAElFTkSuQmCC" style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated;" title="image27"/>
+  <img height="32" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/AET9LsD6dTMo19j1kgHooq9u8w4VK5yPDRcAMhtDFKRXEK8s7ADcAVwCtNjhYxrvPEv8SmsaFr8VCo7oAAAAAElFTkSuQmCC" style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated;" title="image28"/>
+  <img height="32" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/AFFZ7ejnK6rsf/ntIAQbK3UsVl/b197+LlwA9TNvI/cQ1bL3rj1mBBl5cgbX8Mq6IN9Ax7WPGlTK1SQ3AAAAAElFTkSuQmCC" style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated;" title="image29"/>
+  <img height="32" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/AT6L7VERFlHScnrdqgQS35/vZeeulwR+tQkBmOzHN5LdGODrIXDoALGfEOzQCdXOfwJe148gGeawuawLAAAAAElFTkSuQmCC" style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated;" title="image30"/>
+  <img height="32" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/AO6x5gHui9CnVC41jQT91Yx1PqjDR8Bm/bYCiu2XHxWg8n67HB6kAqvPv7SjOzlL7I3SD9Z2GvN6GuXcAAAAAElFTkSuQmCC" style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated;" title="image31"/>
+  <img height="32" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/AGI3BWFqONSw0jUbqwIFjy908EetV5XEi+wBo13K/908zD2gscdiAAH7dKzo8am+tP03ZGYvGkVWRhriAAAAAElFTkSuQmCC" style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated;" title="image32"/>
+  <img height="32" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/AZHTEOjaDEQG+o54CQD+9Tf3NTDqitmnKxcBSiEYx84x0B83CjQnAtkucIWCOh7w0wEKGVTZFOeoP6q8AAAAAElFTkSuQmCC" style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated;" title="image33"/>
+  <img height="32" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/AF4598RHsuWCJ9zikgFX96WU/qhbJQZRtvoBdlMoPftFgjCwF8SMARNct+fJ6pfnYN/FUbF0Gquzp2h9AAAAAElFTkSuQmCC" style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated;" title="image34"/>
+  <img height="32" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/AYUg1EVJpb3H2BWaMwIeXk+E5DF+PcgcTdQCviSjeygI8EDE4UURAcbRxkfpwxfBFHECMUssFlD/DvtVAAAAAElFTkSuQmCC" style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated;" title="image35"/>
+  <img height="32" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/AFE6fy6V8VqakPRBUgEeDbyJqh3NIfctju8AnuzYLwzMHolaltNqBDXBGeyEbBZtAiIJFVVVFYJkrRmyAAAAAElFTkSuQmCC" style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated;" title="image36"/>
+  <img height="32" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/ACbOkTxipR4sB4a16gBq6hmvpRgc6w6goocCB0hGaNua8rXSUQ/vAhEETjlmjYPgRbMiBzKVFUe1wk0+AAAAAElFTkSuQmCC" style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated;" title="image37"/>
+  <img height="32" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/AK+bTFA+1PTRvXEeDAAOavMhPRzfPXwjDh8CWzeB9xQIXDWpz+8dAnUHBvJCQZBclbfxEBhNFFJkUHxEAAAAAElFTkSuQmCC" style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated;" title="image38"/>
+  <img height="32" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/AQZMHd8YsugEC9qoMQFHbl0Y3wbtAI78u2YEBwGqnHmQCQrv+M8zAuULMYybOFHQI6GrAw5JFNhrDgR4AAAAAElFTkSuQmCC" style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated;" title="image39"/>
+  <img height="32" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/AYBsa4H82QC2OgUF/gL+cHDH5dUC3+AEHvMApSgMYHHexBM0ftcYAVMzi9vPHBF0O7jqo3TlF7uoL/1SAAAAAElFTkSuQmCC" style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated;" title="image40"/>
+  <img height="32" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/AO11h/bgpLV6DjaCVwECUkROCe82cadltz8EbN89Xr0r66rG18wcAmTeB3PJ38nZ2UdnZXkiGRjeqywZAAAAAElFTkSuQmCC" style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated;" title="image41"/>
+  <img height="32" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/ACClMbee7RtOA9MXaQHfxrUGIx8ARwcPzrkEGO74AIkTboaJLpk2AGpsAa/bxo7dTr9V8gfVFX2e3myqAAAAAElFTkSuQmCC" style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated;" title="image42"/>
+  <img height="32" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/AG9IdgYVhsnpnvBTRAG7Ch9SSpx6LGTU3EICi0YlBIwr0RBoEtudAgcKrBDd5jCscaMFlRKbFGG3I5egAAAAAElFTkSuQmCC" style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated;" title="image43"/>
+  <img height="32" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/Adic0YdD+zRzT+l3GwBBreL7EID+GtrVXpMEQB6hQHdU+hpLlFMnAhLyJSt4+jUBS0qscoeAFrwVb4+RAAAAAElFTkSuQmCC" style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated;" title="image44"/>
+  <img height="32" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/AL8A/0fkHrRmeCu+XAGULfYvLILCqKYYf90B08SfioEUrOa+t4EXArtF4BxzK3D+j53bBIQLGQI9SLN2AAAAAElFTkSuQmCC" style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated;" title="image45"/>
+  <img height="32" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/AFlg8Zgcu6RvQQoMSwEVlfY2JxmD5ezJH2kAHNK0Bgh8jNYoUznjABQM0qa2WSAE+JYy9BpdFS872I6qAAAAAElFTkSuQmCC" style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated;" title="image46"/>
+  <br/>
+  <img height="32" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/AF9SgCDfrxx6bh70xgDrKv/gJ8q/CxkhzsoCxNgF1lauLzizWcguAtMlKw1iJDicVGAI2md9FkVt2x5dAAAAAElFTkSuQmCC" style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated;" title="image47"/>
+  <img height="32" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/AWAnzVUC6KgxNIcGDABMRGf5Kj8IbsUX3KwCt7oN5jtMAkX680SvAMUkqHWy/QTuwiXaEQszFfuKJClaAAAAAElFTkSuQmCC" style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated;" title="image48"/>
+  <img height="32" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAP0lEQVR4nAE0AMv/ANpKFibnoHv/072l8AK3Wy19rEOx1sq1zSEAyQyX2LM8aSUWa7kfAmX5LP7PIUpz3dM9J7mVGY1zKCmAAAAAAElFTkSuQmCC" style="border:1px solid #021a40; margin: 3px 3px; image-rendering: pixelated;" title="image49"/>
+  <h2 style="text-align: left;">
+   table section
+  </h2>
+  <div class="pandas-dataframe">
+   <table border="1" class="dataframe">
+    <thead>
+     <tr style="text-align: right;">
+      <th>
+       date
+      </th>
+      <th>
+       c0
+      </th>
+      <th>
+       c1
+      </th>
+      <th>
+       c2
+      </th>
+      <th>
+       c3
+      </th>
+      <th>
+       c4
+      </th>
+      <th>
+       c5
+      </th>
+      <th>
+       c6
+      </th>
+      <th>
+       c7
+      </th>
+      <th>
+       c8
+      </th>
+      <th>
+       c9
+      </th>
+      <th>
+       last_column
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <th>
+       1970-01-01
+      </th>
+      <td>
+       0.435876
+      </td>
+      <td>
+       -0.318957
+      </td>
+      <td>
+       0.630488
+      </td>
+      <td>
+       -2.152493
+      </td>
+      <td>
+       -1.465116
+      </td>
+      <td>
+       0.363446
+      </td>
+      <td>
+       1.862928
+      </td>
+      <td>
+       0.835059
+      </td>
+      <td>
+       -0.682451
+      </td>
+      <td>
+       -1.692052
+      </td>
+      <td>
+       value_str
+      </td>
+     </tr>
+     <tr>
+      <th>
+       1970-01-02
+      </th>
+      <td>
+       0.742686
+      </td>
+      <td>
+       -0.080583
+      </td>
+      <td>
+       0.590704
+      </td>
+      <td>
+       0.115299
+      </td>
+      <td>
+       0.029643
+      </td>
+      <td>
+       2.958625
+      </td>
+      <td>
+       -0.006130
+      </td>
+      <td>
+       -0.159245
+      </td>
+      <td>
+       -0.121449
+      </td>
+      <td>
+       -0.583537
+      </td>
+      <td>
+       value_str
+      </td>
+     </tr>
+     <tr>
+      <th>
+       1970-01-03
+      </th>
+      <td>
+       0.990133
+      </td>
+      <td>
+       -0.353754
+      </td>
+      <td>
+       0.635943
+      </td>
+      <td>
+       0.284603
+      </td>
+      <td>
+       1.218986
+      </td>
+      <td>
+       0.420180
+      </td>
+      <td>
+       -1.213385
+      </td>
+      <td>
+       -1.326488
+      </td>
+      <td>
+       1.408369
+      </td>
+      <td>
+       -0.608711
+      </td>
+      <td>
+       value_str
+      </td>
+     </tr>
+     <tr>
+      <th>
+       1970-01-04
+      </th>
+      <td>
+       -1.320603
+      </td>
+      <td>
+       -0.669619
+      </td>
+      <td>
+       1.264625
+      </td>
+      <td>
+       -1.420213
+      </td>
+      <td>
+       -0.866495
+      </td>
+      <td>
+       -0.666808
+      </td>
+      <td>
+       -1.251190
+      </td>
+      <td>
+       -1.184327
+      </td>
+      <td>
+       -1.518108
+      </td>
+      <td>
+       -0.461187
+      </td>
+      <td>
+       value_str
+      </td>
+     </tr>
+     <tr>
+      <th>
+       1970-01-05
+      </th>
+      <td>
+       -0.354909
+      </td>
+      <td>
+       -0.682538
+      </td>
+      <td>
+       -1.653698
+      </td>
+      <td>
+       1.253336
+      </td>
+      <td>
+       -1.329079
+      </td>
+      <td>
+       0.278034
+      </td>
+      <td>
+       -1.074767
+      </td>
+      <td>
+       0.668317
+      </td>
+      <td>
+       0.955832
+      </td>
+      <td>
+       -0.877614
+      </td>
+      <td>
+       value_str
+      </td>
+     </tr>
+    </tbody>
+   </table>
+  </div>
+  <h2 style="text-align: left;">
+   page break example
+  </h2>
+  <p style="font-size:16px; text-indent: 0; text-align: left;">
+   mhm
+  </p>
+  <p style="font-size:16px; text-indent: 0; text-align: left;">
+   mhm
+  </p>
+  <p style="font-size:16px; text-indent: 0; text-align: left;">
+   mhm
+  </p>
+  <p style="font-size:16px; text-indent: 0; text-align: left;">
+   mhm
+  </p>
+  <p style="font-size:16px; text-indent: 0; text-align: left;">
+   mhm
+  </p>
+  <p style="font-size:16px; text-indent: 0; text-align: left;">
+   mhm
+  </p>
+  <p style="font-size:16px; text-indent: 0; text-align: left;">
+   mhm
+  </p>
+  <p style="font-size:16px; text-indent: 0; text-align: left;">
+   mhm
+  </p>
+  <p style="font-size:16px; text-indent: 0; text-align: left;">
+   mhm
+  </p>
+  <p style="font-size:16px; text-indent: 0; text-align: left;">
+   mhm
+  </p>
+  <p style="font-size:16px; text-indent: 0; text-align: left;">
+   mhm
+  </p>
+  <p style="font-size:16px; text-indent: 0; text-align: left;">
+   mhm
+  </p>
+  <p style="font-size:16px; text-indent: 0; text-align: left;">
+   mhm
+  </p>
+  <p style="font-size:16px; text-indent: 0; text-align: left;">
+   mhm
+  </p>
+  <p style="font-size:16px; text-indent: 0; text-align: left;">
+   mhm
+  </p>
+  <p style="font-size:16px; text-indent: 0; text-align: left;">
+   before page break
+  </p>
+  <p style="page-break-after: always;">
+  </p>
+  <h2 style="text-align: left;">
+   after page break
+  </h2>
+  <h2 style="text-align: left;">
+   image from the Internet
+  </h2>
+  <img src="https://spacecenter.org/wp-content/uploads/2020/01/KSC-20200117-PH-SPX01_0001_medium.jpg" style="border:1px solid #021a40; margin: 3px 3px;" title="image from the Internet" width="60%"/>
+ </body>
 </html>

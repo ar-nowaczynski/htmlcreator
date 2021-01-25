@@ -6,7 +6,7 @@ README_TEXT = README_PATH.read_text()
 
 setup(
     name='htmlcreator',
-    version='0.4.1',
+    version='0.5.0',
     license='MIT',
     description='Build standalone HTML documents using Python code',
     long_description=README_TEXT,
@@ -15,11 +15,9 @@ setup(
     author_email='ar.nowaczynski@gmail.com',
     url='https://github.com/ar-nowaczynski/htmlcreator',
     packages=['htmlcreator'],
-    package_data={
-        'htmlcreator': ['*.css'],
-    },
     python_requires='>=3.6',
     install_requires=[
+        'beautifulsoup4>=4.9.0',
         'numpy>=1.14.0',
         'pandas>=0.22.0',
         'Pillow>=5.0.0',

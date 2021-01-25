@@ -7,16 +7,17 @@ document = HTMLDocument()
 # Set document title
 document.set_title('my document with plotly figures')
 
-# Embed plotly figure
+# Modify default style
+document.css['body']['width'] = '960px'
+
+# Embed first plotly figure
 document.add_header('plotly figure #1')
 df = px.data.iris()
 fig = px.scatter(df, x=df.sepal_length, y=df.sepal_width, color=df.species, size=df.petal_length)
 fig.update_layout(title={'text': 'Iris Data Set', 'x': 0.5, 'xanchor': 'center'})
 document.add_plotly_figure(fig)
-# The first `add_plotly_figure` call includes `plotly.js` library in the document
-# Including `plotly.js` makes HTML document self-contained but also heavier (+3 MB)
 
-# Embed another plotly figure
+# Embed second plotly figure
 document.add_header('plotly figure #2')
 df = px.data.gapminder().query('continent=="Oceania"')
 fig = px.line(df, x='year', y='lifeExp', color='country',

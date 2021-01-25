@@ -17,13 +17,13 @@ _TEST_DOCUMENT_PATH = '_test_document.html'
 def test_HTMLDocument():
     document = HTMLDocument()
 
-    assert document.style != ''
+    assert document.css
 
     document.set_title(title='title')
 
     document.add_header(header='header', level='h2', align='left')
 
-    document.add_text(text='text', size='15px', indent='0', align='left')
+    document.add_paragraph(text='text', size='15px', indent='0', align='left')
 
     document.add_line_break()
 
@@ -42,8 +42,6 @@ def test_HTMLDocument():
     document.add_image(image=_get_PIL_Image(), title='image from PIL')
 
     _create_test_image()
-
-    document.add_image(image=_TEST_IMAGE_PATH, title='image from filepath')
 
     document.add_image(image=pathlib.Path(_TEST_IMAGE_PATH), title='image from Path')
 
@@ -67,7 +65,7 @@ def test_HTMLDocument():
         document.add_image(image=[_get_image_array()])
     except Exception as e:
         assert isinstance(e, TypeError)
-        assert str(e) == "image is of type <class 'list'>, but it should be one of: <class 'numpy.ndarray'>, <class 'PIL.Image.Image'>, <class 'pathlib.Path'> or <class 'str'>."
+        assert str(e) == "image is of type <class 'list'>, but it should be one of: <class 'numpy.ndarray'>, <class 'PIL.Image.Image'> or <class 'pathlib.Path'>."
 
     try:
         document.add_image_link(image_link=_get_image_array())
@@ -75,9 +73,7 @@ def test_HTMLDocument():
         assert isinstance(e, TypeError)
         assert str(e) == "image_link is of type <class 'numpy.ndarray'>, but it should be <class 'pathlib.Path'> or <class 'str'>."
 
-    document.add_plotly_figure(fig=_get_plotly_figure(), include_plotlyjs=False)
-
-    document.add_plotly_figure(fig=_get_plotly_figure(), include_plotlyjs=True)
+    document.add_plotly_figure(fig=_get_plotly_figure())
 
     try:
         document.add_plotly_figure(fig=_get_image_array())
@@ -103,6 +99,7 @@ def _get_df():
         columns=[f'c{i}' for i in range(num_cols)],
     )
     df['col_str'] = 'value_str'
+    df.index.name = 'date'
     return df
 
 
